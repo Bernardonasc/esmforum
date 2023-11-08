@@ -38,9 +38,7 @@ test('Testando num perguntas', () => {
   expect(resposta[0].texto).toBe('2 + 2 = ?');
 });
 
-test('Testando num perguntas', () => {
-  modelo.cadastrar_pergunta('3 + 3 = ?');
-  modelo.cadastrar_resposta(1,'2 + 2 = ?');
-  const resposta = modelo.get_pergunta(1);
-  expect(resposta[0].texto).toBe('3 + 3 = ?');
+test('Testando get pergunta especifica', () => {
+  const resposta = modelo.get_pergunta(6);
+  expect(resposta).toBe(undefined);
 });
